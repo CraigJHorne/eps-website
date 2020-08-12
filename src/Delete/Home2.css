@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+/*For Screens */
+
+
+.home {
+	width: 80vw !important;
+	min-width: 700px !important;
+	margin: 0 auto;
+}
+
+.home__heroBanners {
+	display: flex;
+	height: 30vw;
+}
+
+.home__bannersMain {
+	background-color: red;
+	flex: 2;
+	margin: 2px 2px;
+}
+
+.banner {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.home__bannersSide {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.home__bannersSmall {
+	background-color: pink;
+	flex: 1;
+	margin: 2px 2px;
+}
+
+.home__bannersFullWidth {
+	background-color: orange;
+	margin: 5px 0;
+	height: 10vw;
+}
+
+.home__bannersLower {
+	background-color: orange;
+	margin: 5px 0;
+	height: 15vw;
+	display: flex;
+}
+
+.footer {
+	background-color: purple;
+	margin: 5px 0;
+	height: 20vw;
+	display: flex;
+}
+
+/*For smaller sizes */
+
+
+
+@media only screen and (max-width: 1000px)  {
+	.home {
+	width: 100% !important;
+	margin: 0 auto;
+}
+
+.home__heroBanners {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.home__bannersMain {
+	background-color: red;
+	flex: 2;
+	margin: 5px 0px;
+	width: 100%;
+}
+
+.home__bannersSide {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+.remove__home {
+	display: none;
+}
+
+.home__bannersSmall {
+	background-color: pink;
+	flex: 1;
+	margin: 0px 2px;
+}
+}
+
+@media only screen and (max-width: 700px)  {
+	.home {
+	width: 100% !important;
+	margin: 0 auto;
+}
+
+.home__heroBanners {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.home__bannersMain {
+	background-color: red;
+	flex: 2;
+	margin: 5px 0px;
+	max-width: 100%;
+	height: auto
+}
+
+.home__bannersSide {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	height: 100vw;
+	width: 100%;
+}
+
+.remove {
+	display: none;
+}
+
+.home__bannersSmall {
+	background-color: pink;
+	flex: 1;
+	margin: 5px 0px;
+	width: 100%;
+}
+
+.home__bannersLower {
+	background-color: orange;
+	margin: 5px 0;
+	height: 100vw;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.home__bannersFullWidth {
+	background-color: orange;
+	margin: 5px 0;
+	height: 50vw;
+	width: 100%;
+}
+
+.footer {
+	background-color: purple;
+	margin: 5px 0;
+	height: 40vw;
+	display: flex;
+	width: 100%;
+}
+
+}

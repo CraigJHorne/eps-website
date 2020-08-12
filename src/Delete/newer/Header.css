@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+/*Style Header */
+
+.header {
+	background-color: blue;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	font-family: 'Bebas Neue', cursive;
+	height: 5vw;
+	padding: 20px 0px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	justify-content: space-evenly;
+}
+
+/*Style Header Logo */
+
+.header__logo {
+	max-height: 5vw;
+	max-width: 23vw;
+	object-fit: contain;
+	margin-top: 1vw;
+}
+
+/*Style Header Search Box */
+
+.header__search {
+	display: flex;
+	background-color: none;
+	border-bottom: 0.1vw solid #000000;
+	height: 2.5vw;
+	margin-left: 3vw;
+	width: 18vw;
+}
+
+.header__search:hover {
+	border-bottom: 0.1vw solid #777;
+}
+
+
+.header__searchInput {
+	width: 100%;
+	font-size: 1.2vw;
+	padding-left: 1vw;
+	padding-bottom: 0.5vw;
+	min-width: 14vw;
+}
+
+.header__searchIcon {
+	color: #777;
+	height: 2.5vw !important;
+	padding-bottom: 1vw !important;
+}
+
+/*Style Header Links */
+
+.header__nav {
+	width: 19vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.header__link {
+	color: #000000;
+	font-size: 1.5vw;
+	text-decoration: none;
+	letter-spacing: 0.1vw;
+	padding-top: 1vw;
+}
+
+.header__link:hover {
+	color: #777;
+}
+
+.header__optionBasket {
+	font-size: 3vw;
+	display: flex;
+}
+
+.header__basketCount {
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+	font-size: 1.5vw;
+}
+
+.header__shoppingCartIcon {
+	height: 2.5vw !important;;
+}
+
+.remove__a1000 {
+    display: none;
+  }
+
+
+@media only screen and (max-width: 1000px) {
+  .remove__u1000 {
+    display: none;
+  }
+
+  .remove__a1000 {
+    display: flex;
+    height: 50px;
+  }
+
+  .header__logo {
+	margin-left: 9vw;
+}
+}
+

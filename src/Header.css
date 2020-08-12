@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+/* -- Style Header -- */
+
+.header {
+	background-color: blue;
+	min-width: 520px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.header__wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	height: 40px;
+	padding: 25px 30px 20px 30px;
+	justify-content: space-between;
+  	align-items: flex-end;
+  	display: flex;
+ 	flex-wrap: wrap;
+}
+
+
+/* -- Style Header Logo -- */
+
+.header__logo {
+	width: 250px;
+}
+
+/* - Style Header Left - */
+
+/* -- Style Header Search -- */
+
+.header__search {
+	display: flex;
+	width: 250px;
+	border-bottom: 2px solid #000;
+}
+
+.header__search:hover {
+	border-bottom: 2px solid #777;
+}
+
+.header__searchInput {
+	display: flex;
+	flex: 1;
+	padding-left: 10px;
+}
+
+.header__searchIcon {
+	width: 30px !important;
+	color: #777;
+}
+
+/* -- Style Header Burger -- */
+
+.header__burger {
+	display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+	.header__search {
+	display: none;
+}
+
+	.header__burger {
+	display: flex;
+	height: 35px !important;
+	width: auto !important;
+	align-items: flex-end;
+}
+
+	.header_burgerMenu {
+		padding-bottom: 3px;
+		font-family: 'Catamaran', sans-serif;
+		font-weight: 500;
+	}
+
+}
+
+/* -- Style Header Links / Cart -- */
+
+.header__right {
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 1px;
+	display: flex;
+	align-items: flex-end;
+}
+
+
+.header__option{
+	padding-bottom: 5px;
+	margin: 0 15px 0 0;
+	color: #000000;
+}
+
+.header__option:hover {
+	color: #777;
+}
+
+
+.header__basketCount {
+	margin-left: 3px;
+}
+
+.header__optionBasket {
+	color: #000000;
+	display: flex;
+	align-items: center;
+
+}
+
+.header__optionBasket:hover {
+	color: #000000;
+}
+
+@media only screen and (max-width: 800px) {
+	.header__option {
+	display: none;
+}
+}
