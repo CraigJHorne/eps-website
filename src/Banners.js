@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function SmallBanner() {
   return (
 
-  	<div>
+  	<div className="banner__smallContainer">
 		<Link to="/">
 			<img
 			className="banner__small"
@@ -14,6 +14,10 @@ function SmallBanner() {
 			alt="logo"
 			/>
 		</Link>
+		<div className="banner_smallText">
+  			<h3>Hello</h3>
+  			<h4>Infoooooooooooooooo</h4>
+  		</div>
 	</div>
 
   );
