@@ -3,20 +3,21 @@ import './Banners.css';
 import { Link } from 'react-router-dom';
 
 
-function SmallBanner() {
+function SmallBanner({image, heading, info}) {
   return (
 
-  	<div className="banner__smallContainer">
+
+	<div className="banner__smallContainer">
 		<Link to="/">
 			<img
-			className="banner__small"
-			src={require("./images/EPS Small575 x 320.jpg")} 
-			alt="logo"
+			className={"banner__small"}
+			src={ image }
+			alt="banner"
 			/>
 		</Link>
 		<div className="banner_smallText">
-  			<h3>Hello</h3>
-  			<h4>Infoooooooooooooooo</h4>
+  			<h3>{ heading } </h3>
+  			<h4>{ info }</h4>
   		</div>
 	</div>
 

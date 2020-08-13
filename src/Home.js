@@ -16,8 +16,8 @@ function Home() {
 	    		<Link to="/">
 					<img
 						className="home__bannerHero"
-						src={require("./images/Wasps-768x456.jpg")} 
-						alt="logo"
+						src="/images/Wasps-768x456.jpg" 
+						alt="banner"
 					/>
 				</Link>
 
@@ -25,8 +25,14 @@ function Home() {
 
 			<div className="home__heroSmall">
 
-				<SmallBanner />
-				<SmallBanner />
+				<SmallBanner 
+				image="/images/EPSSmall575x320.jpg"
+				heading="DONCASTER ROVERS SHOP"
+				info="OFFICIAL DONCASTER ROVERS PRODUCTS" />
+				<SmallBanner 
+				image="/images/EPSSmall575x320.jpg"
+				heading="LEEDS RHINOS SHOP"
+				info="OFFICIAL LEEDS RHINOS PRODUCTS" />
 
 			</div>
 
@@ -66,9 +72,24 @@ function Home() {
 
 		<div className="home__lowerContainer">
 
-			<div className="home__bannerLower"><SmallBanner /></div>
-			<div className="home__bannerLower"><SmallBanner /></div>
-			<div className="home__bannerLower home__bannerRemove"><SmallBanner /></div>
+			<div className="home__bannerLower">
+				<SmallBanner 
+				image="/images/EPSSmall575x320.jpg"
+				heading="DONCASTER ROVERS SHOP"
+				info="OFFICIAL DONCASTER ROVERS PRODUCTS" />
+			</div>
+			<div className="home__bannerLower">
+				<SmallBanner 
+				image="/images/EPSSmall575x320.jpg"
+				heading="DONCASTER ROVERS SHOP"
+				info="OFFICIAL DONCASTER ROVERS PRODUCTS" />
+			</div>
+			<div className="home__bannerLower home__bannerRemove">
+				<SmallBanner 
+				image="/images/EPSSmall575x320.jpg"
+				heading="DONCASTER ROVERS SHOP"
+				info="OFFICIAL DONCASTER ROVERS PRODUCTS" />
+			</div>
 
 		</div>
 
