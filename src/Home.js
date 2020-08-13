@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import CheckCircle from '@material-ui/icons/CheckCircleOutline';
+import SmallBanner from './Banners';
 
 
 function Home() {
@@ -24,21 +25,8 @@ function Home() {
 
 			<div className="home__heroSmall">
 
-				<Link to="/">
-					<img
-						className="home__bannerHero"
-						src={require("./images/EPS Small575 x 320.jpg")} 
-						alt="logo"
-					/>
-				</Link>
-
-				<Link to="/">
-					<img
-						className="home__bannerHero"
-						src={require("./images/EPS Small575 x 320.jpg")} 
-						alt="logo"
-					/>
-				</Link>
+				<SmallBanner />
+				<SmallBanner />
 
 			</div>
 
@@ -78,29 +66,9 @@ function Home() {
 
 		<div className="home__lowerContainer">
 
-			<Link to="/">
-				<img
-					className="home__bannerLower"
-					src={require("./images/EPS Small575 x 320.jpg")} 
-					alt="logo"
-				/>
-			</Link>
-
-			<Link to="/">
-				<img
-					className="home__bannerLower"
-					src={require("./images/EPS Small575 x 320.jpg")} 
-					alt="logo"
-				/>
-			</Link>
-
-			<Link to="/">
-				<img
-					className="home__bannerLower home__bannerRemove"
-					src={require("./images/EPS Small575 x 320.jpg")} 
-					alt="logo"
-				/>
-			</Link>
+			<div className="home__bannerLower"><SmallBanner /></div>
+			<div className="home__bannerLower"><SmallBanner /></div>
+			<div className="home__bannerLower home__bannerRemove"><SmallBanner /></div>
 
 		</div>
 

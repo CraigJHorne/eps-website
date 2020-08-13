@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+/* -- Style Home -- */
+
+
+
+.banner__small {
+	width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+
+	.banner__small {
+		margin: 2px 0px;
+		width: 99%;
+}
+}
