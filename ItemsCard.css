@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+button {
+	-webkit-appearance: none;
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+/* -- Style Item Card -- */
+
+.items__container {
+	background-color: #ffffff;
+	height: 20em;
+	display: flex;
+	justify-content: center;
+	min-width: 230px;
+	width: 100%;
+
+}
+
+.two {
+	display: none;
+}
+
+.items__main {
+	display: flex;
+	flex-direction: column;
+	height: 85%;
+	text-align: center;
+	justify-content: center;
+}
+
+.items__imageContainer {
+	height: 90%;
+	width: auto;
+	margin: 10px 0px;
+	justify-content: center;
+}
+
+.items__image {
+	height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	justify-content: center;
+}
+
+.items__text {
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 2px;
+	color: #000000;
+	margin-bottom: 5px
+}
+
+.items__lower {
+	display: none;
+	color: #000000;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.items__button {
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 2px;
+	background-color: #606060;
+	color: #ffffff;
+	margin: 0px 20px;
+	padding: 5px 10px;
+}
+
+
+
+/* -- On Hover -- */
+
+
+.items__container:hover {
+	height: 25em;
+	transform: scale(1.02);
+	-webkit-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
+	z-index: 50;
+	overflow: visible;
+	margin-bottom: -5em;
+	justify-content: center;
+	text-align:center;
+}
+
+
+.items__container:hover .items__lower {
+	display: flex;
+	justify-content: center;
+}
+
+.items__container:hover .two {
+	display: flex;
+}
+
+.items__container:hover .one {
+	display: none;
+}
+
+.items__container:hover .items__imageContainer {
+	height: 80%;
+	width: auto;
+	margin: 10px auto;
+}
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 900px) {
+
+.items__container {
+	background-color: #ffffff;
+	height: 26em;
+	display: flex;
+	justify-content: center;
+	min-width: 230px;
+	width: 100%;
+
+}
+}
+
+@media only screen and (max-width: 540px) {
+
+.items__container {
+
+	width: 100%;
+
+}
+}
+
+
+
