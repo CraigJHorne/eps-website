@@ -45,20 +45,25 @@ button {
 }
 
 .items__main {
+	display: flex;
+	flex-direction: column;
 	height: 85%;
 	text-align: center;
+	justify-content: center;
 }
 
 .items__imageContainer {
 	height: 90%;
 	width: auto;
 	margin: 10px 0px;
+	justify-content: center;
 }
 
 .items__image {
 	height: 100%;
 	max-width: 100%;
 	object-fit: cover;
+	justify-content: center;
 }
 
 .items__text {
@@ -97,7 +102,10 @@ button {
 	z-index: 50;
 	overflow: visible;
 	margin-bottom: -5em;
+	justify-content: center;
+	text-align:center;
 }
+
 
 .items__container:hover .items__lower {
 	display: flex;
@@ -116,6 +124,30 @@ button {
 	height: 80%;
 	width: auto;
 	margin: 10px auto;
+}
+
+/* -- MEDIA QUERIES -- */
+
+@media only screen and (max-width: 900px) {
+
+.items__container {
+	background-color: #ffffff;
+	height: 26em;
+	display: flex;
+	justify-content: center;
+	min-width: 230px;
+	width: 100%;
+
+}
+}
+
+@media only screen and (max-width: 540px) {
+
+.items__container {
+	
+	width: 100%;
+
+}
 }
 
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import './CategoryLayout.css';
-import { Link } from 'react-router-dom';
 import ItemsCard from './ItemsCard';
 
 

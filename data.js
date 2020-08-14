@@ -7,7 +7,8 @@ export default {
 		category: "Off-Field"
 		team: "Gloucester Rugby"
 		price: 44.99,
-		image: "/images/productphotos/Gloucester 2019-20 Home Shirt.png",
+		imageOne: "/images/Product2.jpg",
+		imageTwo: "/images/Product1.jpg",
 	},
 	{
 		id: 1,
@@ -16,7 +17,8 @@ export default {
 		category: "Off-Field"
 		team: "Gloucester Rugby"
 		price: 44.99,
-		image: "/images/productphotos/Gloucester 2019-20 Away Shirt.png",
+		imageOne: "/images/Product2.jpg",
+		imageTwo: "/images/Product1.jpg",
 	},
 	]
 }

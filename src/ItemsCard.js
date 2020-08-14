@@ -8,7 +8,7 @@ import HeartIcon from '@material-ui/icons/FavoriteBorder';
 function ItemsCard({imageOne, imageTwo, name, price}) {
 
   return (
-    <div className="items__container .fade-in">
+    <div className="items__container">
 
         <Link to="/product">
 
