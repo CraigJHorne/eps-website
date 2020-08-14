@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
+import { useStateValue } from './StateProvider';
 
 function Header() {
+
+	const [{ basket }] =  useStateValue();
+
+
 	return (
 
 		<div className="header">
@@ -30,7 +35,7 @@ function Header() {
 				<Link to="/">
 				<img
 					className="header__logo" 
-					src={require("./images/EPS-black-RGB.png")} 
+					src="/images/EPS-black-RGB.png"
 					alt="logo"
 				/>
 				</Link>
@@ -50,7 +55,7 @@ function Header() {
 						<Link className="header__link" to="/checkout">
 							<div className="header__optionBasket">
 								<ShoppingCartIcon className="header__shoppingCartIcon" />
-								<span className="header__basketCount">0</span>
+								<span className="header__basketCount">{basket.length}</span>
 							</div>
 						</Link>
 

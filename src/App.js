@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Navigation from './Navigation';
 import Home from './Home';
+import CategoryLayout from './CategoryLayout';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login">
           <Header />
           <Navigation />
-          <h1>Login</h1>
+          <CategoryLayout />
         </Route>
         <Route path="/">
           <Header />
