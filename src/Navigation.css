@@ -52,6 +52,12 @@ a:link{
 
 }
 
+.navigation__option:hover {
+	color: #d4d4d4;
+	margin: 0 20px;
+
+}
+
 .red {
 	background-color: red;
 	height: 50px;
