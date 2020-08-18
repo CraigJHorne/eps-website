@@ -1,0 +1,180 @@
+.dp-container {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 470;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.dp-container.active {
+	display: flex;
+}
+
+.dp-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.1;
+	width: 100%;
+    height: 100%;
+    z-index: 500;
+}
+
+.dp-box {
+	width: 320px;
+	position: relative;
+	z-index: 510;
+	max-width: calc(100% - 40px);
+	max-height: 100%;
+}
+
+@media only screen and (max-height: 620px) {
+	.dp-box {
+		overflow: scroll;
+	}
+}
+
+.dp-header {
+	padding: 30px 15px;
+	text-align: center;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,e6e6e6+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 50%, #e6e6e6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 50%,#e6e6e6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #ffffff 0%,#ffffff 50%,#e6e6e6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=1 ); /* IE6-9 */
+}
+
+.dp-bar {
+	height: 5px;
+	width: 100%;
+}
+
+.dp-main {
+	padding: 30px 15px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	color: #fff;
+	text-align: center;
+	font-family: aktiv-grotesk-condensed,sans-serif;
+}
+
+.dk-small {
+	opacity: 0.6;
+	text-transform: uppercase;
+	font-family: aktiv-grotesk-condensed,sans-serif;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.dk-large:after, .dk-large:before {
+	height: 2px;
+	width: 80%;
+	content: '';
+	display: block;
+	margin: 0 auto;
+	background: #fff;
+	opacity: 0.6;
+}
+
+.dk-large:after {
+	margin-top: 6px;
+	margin-bottom: 10px;
+}
+
+.dk-large {
+	font-size: 50px;
+	line-height: 56px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.dk-medium {
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	margin-bottom: 10px;
+	opacity: 0.6;
+}
+
+.dk-extra-small {
+	font-size: 16px;
+	line-height: 22px;
+	opacity: 0.5;
+}
+.dp-close {
+	width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.dp-close:hover {
+	cursor: pointer;
+}
+.dp-main .klaviyo-form ::-webkit-input-placeholder { /* Edge */
+	letter-spacing: 0.5px !important;
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+}
+
+.dp-main .klaviyo-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	letter-spacing: 0.5px !important;
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+}
+
+.dp-main .klaviyo-form ::placeholder {
+	letter-spacing: 0.5px !important;
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+}
+
+.dp-main .klaviyo-form input {
+	letter-spacing: 0.5px !important;
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+}
+.dp-main .klaviyo-form button {
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+	text-transform: uppercase;
+	letter-spacing: 0.5px !important;
+}
+
+.dp-main .ql-editor p {
+	font-size: 24px !important;
+	text-transform: uppercase !important;
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+	letter-spacing: 0.5px !important;
+}
+
+.b-promo-box {
+	font-family: aktiv-grotesk-condensed,sans-serif !important;
+	letter-spacing: 0.5px !important;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+}
+.b-promo-box a {
+	text-decoration: underline;
+	color: inherit;
+}
+.b-promo-box a:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+.b-promo-box p {
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+}
