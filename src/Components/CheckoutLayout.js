@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Components/CheckoutLayout.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -40,6 +41,8 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
               </tr></tbody>
             </table>
 
+            <button className="checkout__buttonTwo" type="button">PROCEED TO CHECKOUT</button>
+
 
         </div>
 
@@ -56,9 +59,9 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
               <div className="checkout__calculationsValue">
                 <div className="checkout__shippingValue">
                   <input type="radio" id="standard" name="shipping" value="standard" />
-                  <label for="standard">Standard (3-5 Working Days): £3.98</label><br />
+                  <label htmlFor="standard">Standard (3-5 Working Days): £3.98</label><br />
                   <input type="radio" id="express" name="shipping" value="express" />
-                  <label for="express">Express (1-2 Working Days): £6.98</label><br /></div>
+                  <label htmlFor="express">Express (1-2 Working Days): £6.98</label><br /></div>
               </div>
             </div>
             <hr />
@@ -66,6 +69,10 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
               <div className="checkout__totalHeader">Total</div>
               <div className="checkout__totalValue">£{checkoutPrice}</div>
             </div>
+
+            <Link to="/pay">
+                    <button className="checkout__buttonOne" type="button">PROCEED TO CHECKOUT</button>
+            </Link>
 
         </div>
 
