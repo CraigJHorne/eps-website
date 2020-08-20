@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+/* -- Style mainlayout Footer -- */
+
+.mainlayout__footer {
+	display: flex;
+	color: #ffffff;
+	width: 100%;
+	height: 60px;
+	background-color: #212121;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 14px;
+	margin: auto;	
+}
+
+.mainlayout__footerText {
+	 text-align-last: center;
+}
+
+@media only screen and (max-width: 420px) {
+
+	.mainlayout__footer {
+	font-size: 10px;
+}
+}

@@ -21,41 +21,47 @@ function CategoryLayout() {
 
     <div className="category__items">
 
-    	<ItemsCard 
-    	imageOne="/images/Product2.jpg"
-    	imageTwo="/images/Product1.jpg"
-    	name="Oxen OX1 Grey Marl T-Shirt"
-    	price="32.00"
+    	<ItemsCard
+        itemId="10002"
+    	itemImageOne="/images/Product2.jpg"
+    	itemImageTwo="/images/Product1.jpg"
+    	itemName="Oxen OX1 Grey Marl T-Shirt"
+    	itemPrice="32.00"
+    	/>
+    	<ItemsCard
+        itemId="10003" 
+    	itemImageOne="/images/Product2.jpg"
+    	itemImageTwo="/images/Product1.jpg"
+    	itemName="Top"
+    	itemPrice="17.00"
     	/>
     	<ItemsCard 
-    	imageOne="/images/Product2.jpg"
-    	imageTwo="/images/Product1.jpg"
-    	name="Top"
-    	price="17.00"
+        itemId="10004"
+    	itemImageOne="/images/Product2.jpg"
+    	itemImageTwo="/images/Product1.jpg"
+    	itemName="Bottoms"
+    	itemPrice="40.00"
     	/>
     	<ItemsCard 
-    	imageOne="/images/Product2.jpg"
-    	imageTwo="/images/Product1.jpg"
-    	name="Bottoms"
-    	price="40.00"
+        itemId="10005"
+    	itemImageOne="/images/Product2.jpg"
+    	itemImageTwo="/images/Product1.jpg"
+    	itemName="Long Sleeve"
+    	itemPrice="56.00"
     	/>
     	<ItemsCard 
-    	imageOne="/images/Product2.jpg"
-    	imageTwo="/images/Product1.jpg"
-    	name="Long Sleeve"
-    	price="56.00"
+        itemId="10006"
+    	itemImageOne="/images/Product2.jpg"
+    	itemImageTwo="/images/Product1.jpg"
+    	itemName="Jumper"
+    	itemPrice="33.00"
     	/>
     	<ItemsCard 
-    	imageOne="/images/Product2.jpg"
-    	imageTwo="/images/Product1.jpg"
-    	name="Jumper"
-    	price="33.00"
-    	/>
-    	<ItemsCard 
-    	imageOne="/images/Product2.jpg"
-    	imageTwo="/images/Product1.jpg"
-    	name="Trousers"
-    	price="19.00"
+        itemId="10007"
+    	itemImageOne="/images/Product2.jpg"
+    	itemImageTwo="/images/Product1.jpg"
+    	itemName="Trousers"
+    	itemPrice="19.00"
     	/>
 
     </div>

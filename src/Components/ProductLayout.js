@@ -2,10 +2,25 @@ import React from 'react';
 import '../Components/ProductLayout.css';
 import CheckCircle from '@material-ui/icons/CheckCircleOutline';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
+import { useStateValue } from '../StateProvider';
 
 
 
-function ProductLayout( { productName, productPrice, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
+function ProductLayout( { productId, productName, productPrice, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
+
+    const [{}, dispatch] =  useStateValue();
+
+    const addToBasket = () => {
+        dispatch( {
+            type: "ADD_TO_BASKET",
+            item: {
+                id: productId,
+                name: productName,
+                price: productPrice,
+                image: productImageOne,
+            }
+        })
+  };
 
   return (
     <div className="productlayout">
@@ -51,11 +66,11 @@ function ProductLayout( { productName, productPrice, productBlurb, productImageO
 
             <div className="product__description">
 
-                <h1>{productName}</h1>
+                <div className="product__name">{productName}</div>
 
-                <h3>£{productPrice}</h3>
+                <div className="product__price">£{productPrice}</div>
 
-                <h4>{productBlurb}</h4>
+                <div className="product__blurb">{productBlurb}</div>
 
 
                 <label htmlFor="size" className="product__sizeLabel">Size:</label>
@@ -100,7 +115,7 @@ function ProductLayout( { productName, productPrice, productBlurb, productImageO
                  <div className="product__quantity">-</div>
                  <div className="product__quantity">0</div>
                  <div className="product__quantity">+</div>
-                 <button className="product__button" type="button">ADD TO BASKET</button>
+                 <button className="product__button" type="button" onClick={addToBasket}>ADD TO BASKET</button>
 
                 </div>
 

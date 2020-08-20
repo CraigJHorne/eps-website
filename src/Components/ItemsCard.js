@@ -2,10 +2,26 @@ import React from 'react';
 import '../Components/ItemsCard.css';
 import { Link } from 'react-router-dom';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
+import { useStateValue } from '../StateProvider';
 
 
 
-function ItemsCard({imageOne, imageTwo, name, price}) {
+function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
+
+    const [{}, dispatch] =  useStateValue();
+
+    const addToBasket = () => {
+        dispatch( {
+            type: "ADD_TO_BASKET",
+            item: {
+                id: itemId,
+                name: itemName,
+                price: itemPrice,
+                image: itemImageOne,
+            }
+        })
+  };
+
 
   return (
     <div className="items__container">
@@ -18,20 +34,20 @@ function ItemsCard({imageOne, imageTwo, name, price}) {
 
                     <img
                         className="items__image one" 
-                        src={ imageOne }
+                        src={ itemImageOne }
                         alt="logo"
                     />
                     <img
                         className="items__image two" 
-                        src={ imageTwo }
+                        src={ itemImageTwo }
                         alt="logo"
                     />
                 </div>
                 <div className="items__text">
-                    {name}
+                    {itemName}
                 </div>
                 <div className="items__text">
-                    £{price}
+                    £{itemPrice}
                 </div>
 
             </div>
@@ -39,7 +55,9 @@ function ItemsCard({imageOne, imageTwo, name, price}) {
             <div className="items__lower">
 
                 <HeartIcon />
-                <button className="items__button" type="button">ADD TO BASKET</button>
+                <Link to="/checkout">
+                    <button className="items__button" type="button" onClick={addToBasket}>ADD TO BASKET</button>
+                </Link>
 
             </div>
 

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+/*Remove default Styles */
+
+input {
+	appearance: none;
+	background-color: white;
+	border-width: 0px;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 500;
+}
+
+input:focus {
+	appearance: none;
+	border-width: 0px;
+	outline: none;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+hr {
+	border: 1px solid #c4c6c1;
+}
+
+/* -- Style Main Container -- */
+
+.checkoutlayout {
+	max-width: 1100px;
+	margin: 30px auto 5px auto;
+	display: flex;
+	font-family: 'Catamaran', sans-serif;
+	color: #303030;
+}
+
+/* -- Style Basket -- */
+
+.checkout__mainBasket {
+	flex: 1;
+	padding: 10px;
+	margin: 10px;
+	font-size: 14px;
+}
+
+table {
+	width: 100%;
+}
+
+td, th {
+	text-align: center;
+	justify-content: center;
+	border-bottom: 2px solid #c4c6c1;
+	padding: 10px 0px;
+}
+
+.checkout__product {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: space-around;
+
+}
+
+.checkout__imageContainer {
+	width: 100px;
+	height: 100px;
+}
+
+.checkout__image {
+	height: 100%;
+	width: auto;
+}
+
+.checkout__productSelections {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	justify-content: center;
+}
+
+.checkout__quantity {
+	font-family: 'Bebas Neue', cursive;
+	width: 1.4em;
+	height: 2em;
+	line-height: 2em;
+	border: 1px solid #c4c6c1;
+	text-align: center;
+	vertical-align: middle;
+	color: #303030
+}
+
+/* -- Style Calculations -- */
+
+.checkout__mainCalculations {
+	width: 300px;
+	margin: 10px;
+	padding: 10px 20px;
+	border: 3px solid #c4c6c1;
+	font-size: 16px;
+}
+
+.checkout__calculationsSection {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 12px;
+}
+
+.checkout__calculationsHeader{
+	font-weight: 800;
+}
+
+.checkout__calculationsValue{
+	color: #777;
+}
+
+.checkout__shippingValue{
+	color: #777;
+	margin: 0px 0px 0px 10px;
+	text-align: right;
+	font-size: 13px;
+}
+
+.checkout__totalHeader{
+	font-size: 19px;
+	font-weight: 800;
+}
+
+.checkout__totalValue{
+	font-size: 19px;
+	color: #777;
+}

@@ -4,36 +4,45 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Navigation from './Components/Navigation';
 import Home from './Screens/Home';
-import CategoryLayout from './Components/CategoryLayout';
-import ProductLayout from './Components/ProductLayout';
+import Checkout from './Screens/Checkout';
+import Category from './Screens/Category';
+import Product from './Screens/Product';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <Router>
       <div className="app">
        <Switch>
+        <Route path="/shop/leedsrhinos">
+          <Header />
+          <Navigation />
+          <Product />
+          <Footer />
+        </Route>
+        <Route path="/shop/gloucesterrugby">
+          <Header />
+          <Navigation />
+          <Category />
+          <Footer />
+        </Route>
         <Route path="/checkout">
           <Header />
           <Navigation />
-          <ProductLayout 
-           productName="Leeds Rhinos 2020 Kids Performance Polo 4"
-           productPrice="29.99"
-           productBlurb="Official Leeds Rhinos 2020 Training Range."
-           productImageOne="/images/Product1.jpg"
-           productImageTwo="/images/Product2.jpg"
-           productImageThree="/images/Product1.jpg"
-           productImageFour="/images/Product1.jpg"
-          />
+          <Checkout />
+          <Footer />
         </Route>
         <Route path="/login">
           <Header />
           <Navigation />
-          <CategoryLayout />
+          Login
+          <Footer />
         </Route>
         <Route path="/">
           <Header />
           <Navigation />
           <Home />
+          <Footer />
         </Route>
        </Switch>
       </div>
