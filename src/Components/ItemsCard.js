@@ -8,20 +8,6 @@ import { useStateValue } from '../StateProvider';
 
 function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
 
-    const [{}, dispatch] =  useStateValue();
-
-    const addToBasket = () => {
-        dispatch( {
-            type: "ADD_TO_BASKET",
-            item: {
-                id: itemId,
-                name: itemName,
-                price: itemPrice,
-                image: itemImageOne,
-            }
-        })
-  };
-
 
   return (
     <div className="items__container">
@@ -55,8 +41,8 @@ function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
             <div className="items__lower">
 
                 <HeartIcon />
-                <Link to="/checkout">
-                    <button className="items__button" type="button" onClick={addToBasket}>ADD TO BASKET</button>
+                <Link to="/shop/leedsrhinos">
+                    <button className="items__button" type="button">ADD TO BASKET</button>
                 </Link>
 
             </div>

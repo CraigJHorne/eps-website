@@ -1,57 +1,75 @@
 import React from 'react';
 import '../Components/CheckoutLayout.css';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
+import CheckoutProduct from '../Components/CheckoutProduct';
+import getBasketTotal from '../Reducer';
+import CurrencyFormat from 'react-currency-format';
+import {getTotal} from '../Reducer';
 
 
 
 function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne} ) {
+
+    const [{ basket }, dispatch] =  useStateValue();
+
 
   return (
     <div className="checkoutlayout">
 
 
         <div className="checkout__mainBasket">
+
+          {basket?.length === 0 ? (
+              <div className="checkout__calculationsEmpty">
+                Your basket is empty <br /><br /><br />
+                <Link to="/">
+                    <button className="checkout__buttonFour" type="button">RETURN TO SHOP</button>
+                </Link>
+              </div>
+            ): (
             
-            <table>
+            <div><table>
               <tbody><tr>
                 <th>PRODUCT</th>
                 <th>PRICE</th>
                 <th>QUANTITY</th>
                 <th>TOTAL</th>
               </tr>
-              <tr>
-                <td><div className="checkout__product">
-                    x 
-                    <div className="checkout__imageContainer"><img
-                        className="checkout__image" 
-                        src={ checkoutImageOne }
-                        alt="logo"
-                    /></div>
-                    {checkoutName}
-                </div></td>
-                <td>£{checkoutPrice}</td>
-                <td><div className="checkout__productSelections">
-
-                 <div className="checkout__quantity">-</div>
-                 <div className="checkout__quantity">1</div>
-                 <div className="checkout__quantity">+</div>
-
-                </div></td>
-                <td>£{checkoutPrice}</td>
-              </tr></tbody>
+              {basket?.map((item) => (
+                <CheckoutProduct
+                   checkoutId={item.id}
+                   checkoutName={item.name}
+                   checkoutPrice={item.price}
+                   checkoutImageOne={item.image}
+                 />
+              ))}
+        
+              </tbody>
             </table>
 
-            <button className="checkout__buttonTwo" type="button">PROCEED TO CHECKOUT</button>
-
+            <button className="checkout__buttonTwo" type="button">UPDATE BASKET</button>
+            </div>
+            )}
 
         </div>
+
+        {basket.length > 0 && (
 
         <div className="checkout__mainCalculations">
             <h2>BASKET TOTALS</h2>
 
             <div className="checkout__calculationsSection">
                 <div className="checkout__calculationsHeader">Subtotal</div>
-                <div className="checkout__calculationsValue">£{checkoutPrice}</div>
+                <div className="checkout__calculationsValue">
+                  <CurrencyFormat
+                    decimalScale={2}
+                    value={getTotal(basket)}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"£"}
+                  />
+                </div>
             </div>
             <hr />
             <div className="checkout__calculationsSection">
@@ -59,15 +77,21 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
               <div className="checkout__calculationsValue">
                 <div className="checkout__shippingValue">
                   <input type="radio" id="standard" name="shipping" value="standard" />
-                  <label htmlFor="standard">Standard (3-5 Working Days): £3.98</label><br />
-                  <input type="radio" id="express" name="shipping" value="express" />
-                  <label htmlFor="express">Express (1-2 Working Days): £6.98</label><br /></div>
+                  <label htmlFor="standard">Standard (3-5 Working Days): £3.98</label></div>
               </div>
             </div>
             <hr />
             <div className="checkout__calculationsSection">
               <div className="checkout__totalHeader">Total</div>
-              <div className="checkout__totalValue">£{checkoutPrice}</div>
+              <div className="checkout__totalValue">
+                <CurrencyFormat
+                    decimalScale={2}
+                    value={getTotal(basket) + 3.98}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"£"}
+                  />
+              </div>
             </div>
 
             <Link to="/pay">
@@ -75,6 +99,8 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
             </Link>
 
         </div>
+
+        )}
 
     </div>
   );
