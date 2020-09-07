@@ -3,7 +3,7 @@ export default {
 	{
 		id: 0,
 		SKU: "000001",
-		name: "Gloucester 2021-22 Home Shirt"
+		name: "Gloucester 2020-21 Home Shirt"
 		category: "Off-Field"
 		team: "Gloucester Rugby"
 		price: 44.99,

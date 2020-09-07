@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 
 
-
-function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne} ) {
+function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne, checkoutQty} ) {
 
     const [{ basket }, dispatch] =  useStateValue();
 
@@ -17,6 +16,7 @@ function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImag
       });
 
     }
+
 
 
   return (
@@ -35,7 +35,7 @@ function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImag
                 <td><div className="checkout__productSelections">
 
                  <div className="checkout__quantity">-</div>
-                 <div className="checkout__quantity">1</div>
+                 <div className="checkout__quantity">{ checkoutQty }</div>
                  <div className="checkout__quantity">+</div>
 
                 </div></td>

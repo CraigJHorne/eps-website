@@ -9,7 +9,7 @@ import {getTotal} from '../Reducer';
 
 
 
-function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne} ) {
+function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne, checkoutQty} ) {
 
     const [{ basket }, dispatch] =  useStateValue();
 
@@ -42,6 +42,7 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
                    checkoutName={item.name}
                    checkoutPrice={item.price}
                    checkoutImageOne={item.image}
+                   checkoutQty={item.qty}
                  />
               ))}
         

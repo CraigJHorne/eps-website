@@ -7,6 +7,7 @@ function Product() {
     
     <ProductLayout 
            productId="10001"
+           productQty={1}
            productName="Leeds Rhinos 2020 Kids Performance Polo 4"
            productPrice={29.99}
            productBlurb="Official Leeds Rhinos 2020 Training Range."

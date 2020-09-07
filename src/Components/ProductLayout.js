@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Components/ProductLayout.css';
 import CheckCircle from '@material-ui/icons/CheckCircleOutline';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
@@ -6,7 +6,7 @@ import { useStateValue } from '../StateProvider';
 
 
 
-function ProductLayout( { productId, productName, productPrice, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
+function ProductLayout( { productId, productName, productPrice, productQty, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
 
     const [{}, dispatch] =  useStateValue();
 
@@ -18,9 +18,13 @@ function ProductLayout( { productId, productName, productPrice, productBlurb, pr
                 name: productName,
                 price: productPrice,
                 image: productImageOne,
+                qty: count,
             }
         })
   };
+
+    const [count, plusCount, minusCount] = useState(0);
+
 
   return (
     <div className="productlayout">
@@ -108,16 +112,16 @@ function ProductLayout( { productId, productName, productPrice, productBlurb, pr
 
                     </div>
 
-
-                 <div className="product__descriptionSelections">
+                <div className="product__descriptionSelections">
 
                  <HeartIcon className="product__heart"/>
-                 <div className="product__quantity">-</div>
-                 <div className="product__quantity">0</div>
-                 <div className="product__quantity">+</div>
+                 <div className="product__quantity" onClick={() => minusCount(count - 1)}>-</div>
+                 <div className="product__quantity">{count}</div>
+                 <div className="product__quantity" onClick={() => plusCount(count + 1)}>+</div>
                  <button className="product__button" type="button" onClick={addToBasket}>ADD TO BASKET</button>
 
                 </div>
+                 
 
 
             </div>
@@ -127,5 +131,6 @@ function ProductLayout( { productId, productName, productPrice, productBlurb, pr
     </div>
   );
 }
+
 
 export default ProductLayout;

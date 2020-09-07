@@ -59,6 +59,7 @@ td, th {
 
 
 .checkout__buttonTwo {
+	display: none;
 	font-family: 'Bebas Neue', cursive;
 	letter-spacing: 2px;
 	background-color: #ededed;
