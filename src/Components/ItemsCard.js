@@ -12,7 +12,7 @@ function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
   return (
     <div className="items__container">
 
-        <Link to="/shop/leedsrhinos">
+        <Link to={"/shop/product/" + itemId}>
 
             <div className="items__main">
 

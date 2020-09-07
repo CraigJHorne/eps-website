@@ -17,13 +17,22 @@ function App() {
         <Route path="/shop/leedsrhinos">
           <Header />
           <Navigation />
-          <Product />
+          <Category 
+          team="Leeds Rhinos"/>
+          <Footer />
+        </Route>
+        <Route path="/shop/doncasterrovers">
+          <Header />
+          <Navigation />
+          <Category 
+          team="Doncaster Rovers"/>
           <Footer />
         </Route>
         <Route path="/shop/gloucesterrugby">
           <Header />
           <Navigation />
-          <Category />
+          <Category 
+          team="Gloucester Rugby"/>
           <Footer />
         </Route>
         <Route path="/checkout">
@@ -32,10 +41,30 @@ function App() {
           <Checkout />
           <Footer />
         </Route>
+        <Route path="/shop/oxen">
+          <Header />
+          <Navigation />
+          <Category 
+          team="Oxen"/>
+          <Footer />
+        </Route>
+        <Route path="/shop/sale">
+          <Header />
+          <Navigation />
+          <Category 
+          team="Sale"/>
+          <Footer />
+        </Route>
         <Route path="/login">
           <Header />
           <Navigation />
           Login
+          <Footer />
+        </Route>
+        <Route path="/shop/product/">
+          <Header />
+          <Navigation />
+          <Product />
           <Footer />
         </Route>
         <Route path="/">

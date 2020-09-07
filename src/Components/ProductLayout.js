@@ -6,6 +6,7 @@ import { useStateValue } from '../StateProvider';
 
 
 
+
 function ProductLayout( { productId, productName, productPrice, productQty, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
 
     const [{}, dispatch] =  useStateValue();

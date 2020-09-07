@@ -2,11 +2,13 @@ import React from 'react';
 import CategoryLayout from '../Components/CategoryLayout';
 
 
-function Category() {
+function Category( {team} ) {
   return (
     
-    <CategoryLayout />
+    <CategoryLayout 
+    team={team}/>
   );
 }
 
 export default Category;
+
