@@ -24,7 +24,7 @@ function ProductLayout( { productId, productName, productPrice, productQty, prod
         })
   };
 
-    const [count, plusCount, minusCount] = useState(0);
+    const [count, setCount] = useState(1) ;
 
 
   return (
@@ -116,9 +116,9 @@ function ProductLayout( { productId, productName, productPrice, productQty, prod
                 <div className="product__descriptionSelections">
 
                  <HeartIcon className="product__heart"/>
-                 <div className="product__quantity" onClick={() => minusCount(count - 1)}>-</div>
+                 <div className="product__quantity" onClick={() => setCount(count - 1)}>-</div>
                  <div className="product__quantity">{count}</div>
-                 <div className="product__quantity" onClick={() => plusCount(count + 1)}>+</div>
+                 <div className="product__quantity" onClick={() => setCount(count + 1)}>+</div>
                  <button className="product__button" type="button" onClick={addToBasket}>ADD TO BASKET</button>
 
                 </div>

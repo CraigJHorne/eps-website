@@ -38,7 +38,7 @@ function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImag
                  <div className="checkout__quantity">+</div>
 
                 </div></td>
-                <td>£{checkoutPrice}</td>
+                <td>£{checkoutPrice * checkoutQty}</td>
               </tr>
   );
 }

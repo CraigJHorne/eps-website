@@ -115,6 +115,7 @@ select {
 	font-size: 22px;
 	margin: 5px;
 	margin-bottom: 20px;
+	display: flex;
 }
 
 .product__blurb {
