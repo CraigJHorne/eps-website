@@ -17,6 +17,8 @@ function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImag
 
     }
 
+    console.log({basket});
+
 
   return (
             
