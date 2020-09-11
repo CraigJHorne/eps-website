@@ -16,8 +16,6 @@ function CheckoutProduct({ checkoutId, checkoutUnique, checkoutName, checkoutSiz
 
     }
 
-    console.log(basket[0])
-
 
 
     const [selectionQty, setCount] = useState(checkoutQty);
