@@ -51,7 +51,8 @@ select {
 
 .product__infoGrey {
 	color: #777;
-	margin: 10px;
+	margin: 5px;
+	margin-right: 0px;
 }
 
 .product__infoGrey:hover {
@@ -60,6 +61,7 @@ select {
 
 .product__infoBlack {
 	color: #000000;
+	margin-left: 5px;
 }
 
 .product__infoBlack:hover {
@@ -232,6 +234,10 @@ select {
 
 .product__container {
 	display: block;
+}
+
+.product__imagesSmaller {
+	display: none;
 }
 
 }

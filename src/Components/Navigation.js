@@ -9,24 +9,24 @@ function Navigation() {
 
 			<div className="navigation__wrap">
 
-				<Link className="navigation__link" to="/shop/gloucesterrugby">
+				<Link className="navigation__link" to="/shop/gloucester">
 					<div className="navigation__option">
-						<span>GLOUCESTER RUGBY</span>
+						<span>GLOUCESTER RANGE</span>
 					</div>
 				</Link>
-				<Link className="navigation__link" to="/shop/leedsrhinos">
+				<Link className="navigation__link" to="/shop/leeds">
 					<div className="navigation__option">
-						<span>LEEDS RHINOS</span>
+						<span>LEEDS RANGE</span>
 					</div>
 				</Link>
-				<Link className="navigation__link" to="/shop/doncasterrovers">
+				<Link className="navigation__link" to="/shop/doncaster">
 					<div className="navigation__option">
-						<span>DONCASTER ROVERS</span>
+						<span>DONCASTER RANGE</span>
 					</div>
 				</Link>
-				<Link className="navigation__link" to="/shop/oxen">
+				<Link className="navigation__link" to="/shop/generic">
 					<div className="navigation__option">
-						<span>OXEN</span>
+						<span>GENERIC</span>
 					</div>
 				</Link>
 				<Link className="navigation__link red" to="/shop/sale">

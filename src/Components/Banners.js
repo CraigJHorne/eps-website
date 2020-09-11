@@ -3,12 +3,12 @@ import '../Components/Banners.css';
 import { Link } from 'react-router-dom';
 
 
-function SmallBanner({image, heading, info}) {
+function SmallBanner({image, heading, info, team}) {
   return (
 
 
 	<div className="banner__smallContainer">
-		<Link to="/">
+		<Link to={"/shop/" + team}>
 			<img
 			className={"banner__small"}
 			src={ image }

@@ -2,7 +2,6 @@ import React from 'react';
 import '../Components/ItemsCard.css';
 import { Link } from 'react-router-dom';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
-import { useStateValue } from '../StateProvider';
 
 
 
@@ -12,7 +11,7 @@ function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
   return (
     <div className="items__container">
 
-        <Link to={"/shop/product/" + itemId}>
+            <div>
 
             <div className="items__main">
 
@@ -41,13 +40,13 @@ function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
             <div className="items__lower">
 
                 <HeartIcon />
-                <Link to="/shop/leedsrhinos">
+                <Link>
                     <button className="items__button" type="button">ADD TO BASKET</button>
                 </Link>
 
             </div>
 
-         </Link>
+             </div>
 
     </div>
   );

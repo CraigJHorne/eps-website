@@ -5,10 +5,11 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from '../StateProvider';
+import {getQty} from '../Reducer';
 
 function Header() {
 
-	const [{ basket }, dispatch] =  useStateValue();
+	const [{ basket }] =  useStateValue();
 
 
 	return (
@@ -55,7 +56,7 @@ function Header() {
 						<Link className="header__link" to="/checkout">
 							<div className="header__optionBasket">
 								<ShoppingCartIcon className="header__shoppingCartIcon" />
-								<span className="header__basketCount">{basket?.length}</span>
+								<span className="header__basketCount">{getQty(basket)}</span>
 							</div>
 						</Link>
 

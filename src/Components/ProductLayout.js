@@ -3,13 +3,14 @@ import '../Components/ProductLayout.css';
 import CheckCircle from '@material-ui/icons/CheckCircleOutline';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
 import { useStateValue } from '../StateProvider';
+import { Link } from 'react-router-dom';
 
 
 
 
-function ProductLayout( { productId, productName, productPrice, productQty, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
+function ProductLayout( { productId, productTeam, productName, productPrice, productQty, productBlurb, productImageOne, productImageTwo, productImageThree, productImageFour, } ) {
 
-    const [{}, dispatch] =  useStateValue();
+    const [{basket}, dispatch] =  useStateValue();
 
     const addToBasket = () => {
         dispatch( {
@@ -20,19 +21,25 @@ function ProductLayout( { productId, productName, productPrice, productQty, prod
                 price: productPrice,
                 image: productImageOne,
                 qty: productCount,
+                subTotal: (productPrice * productCount),
+                size: selectedOption,
+                unique: (Math.floor(Math.random() * 100000)),
             }
         })
   };
 
     const [productCount, setCount] = useState(1);
 
+    const [selectedOption, setSelectedOption] = React.useState("S");
+
+
 
   return (
     <div className="productlayout">
 
-        <div className="product__info">
-            <span className="product__infoGrey">Home / Shop / Club / Category /</span><span className="product__infoBlack">{ productName }</span>
-        </div>
+          <div className="product__info">
+            <Link to={"/"}><span className="product__infoGrey">Home / Shop /</span></Link><Link to={"/shop/" + productTeam}><span className="product__infoGrey">{productTeam}</span></Link><span className="product__infoGrey">/</span> <span className="product__infoBlack">{productName}</span>
+         </div>
 
         <div className="product__container">
             <div className="product__images">
@@ -80,12 +87,12 @@ function ProductLayout( { productId, productName, productPrice, productQty, prod
 
                 <label htmlFor="size" className="product__sizeLabel">Size:</label>
 
-                <select name="size" id="size" defaultValue="choose" className="product__sizeSelector">
+                <select name="size" id="size" value={selectedOption} onChange={evt => setSelectedOption(evt.target.value)} className="product__sizeSelector">
                   <option value="choose" disabled>Choose a size</option>
-                  <option value="Small">Small</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Large">Large</option>
-                  <option value="Extra Large">Extra Large</option>
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">Extra Large</option>
                 </select>
 
                 <div className="product__descriptionFeatures">

@@ -3,10 +3,15 @@ export const initialState = {
 };
 
 export const getTotal = (basket) => (
-    basket?.reduce((amount, item) => item.price + amount, 0));
+    basket?.reduce((amount, item) => item.subTotal + amount, 0));
+
+export const getQty = (basket) => (
+    basket?.reduce((amount, item) => item.qty + amount, 0));
+
 
 
 const reducer = (state, action) => {
+
 	switch (action.type) {
 		case "ADD_TO_BASKET":
 			return { 
@@ -16,13 +21,14 @@ const reducer = (state, action) => {
 		case "REMOVE_FROM_BASKET":
 
 			let newBasket = [...state.basket];
-
 			const index = state.basket.findIndex(
 				(basketItem) => basketItem.id === action.id);
+
 
 			if (index >= 0) {
 
 				newBasket.splice(index, 1);
+
 
 			} else {
 				console.warn(
@@ -31,8 +37,11 @@ const reducer = (state, action) => {
 			}
 
 			return { ...state, basket: newBasket };
+
+
 		default:
 			return state;
+
 	}
 }
 

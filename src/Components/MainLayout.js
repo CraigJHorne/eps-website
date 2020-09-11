@@ -22,7 +22,7 @@ function MainLayout(
 
     		<div className="mainlayout__heroMain">
 
-	    		<Link to="/">
+	    		<Link to="/shop/gloucester">
 					<img
 						className="mainlayout__bannerHero"
 						src={ heroMainImage }
@@ -37,11 +37,13 @@ function MainLayout(
 				<SmallBanner 
 				image={ heroTopImage }
 				heading={ heroTopHeader }
-				info={ heroTopInfo } />
+				info={ heroTopInfo }
+				team="doncaster" />
 				<SmallBanner 
 				image={ heroBottomImage }
 				heading={ heroBottomHeader }
-				info={ heroBottomInfo } />
+				info={ heroBottomInfo }
+				team="leeds" />
 
 			</div>
 
@@ -85,19 +87,22 @@ function MainLayout(
 				<SmallBanner 
 				image={ lowerOneImage }
 				heading={ lowerOneHeader }
-				info={ lowerOneInfo } />
+				info={ lowerOneInfo }
+				team="generic" />
 			</div>
 			<div className="mainlayout__bannerLower">
 				<SmallBanner 
 				image={ lowerTwoImage }
 				heading={ lowerTwoHeader }
-				info={ lowerTwoInfo } />
+				info={ lowerTwoInfo }
+				team="sale" />
 			</div>
 			<div className="mainlayout__bannerLower mainlayout__bannerRemove">
 				<SmallBanner 
 				image={ lowerThreeImage }
 				heading={ lowerThreeHeader }
-				info={ lowerThreeInfo } />
+				info={ lowerThreeInfo }
+				team="gloucester" />
 			</div>
 
 		</div>

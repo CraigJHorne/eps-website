@@ -1,21 +1,38 @@
 import React from 'react';
 import ProductLayout from '../Components/ProductLayout';
+import data from '../data.js';
+import Header from '../Components/Header';
+import Navigation from '../Components/Navigation';
+import Footer from '../Components/Footer';
 
 
-function Product() {
+function Product(props) {
+
+const chosenProduct = (data.products[props.match.params.id]);
+
+
+
   return (
+
+    <div>
+    <Header />
+    <Navigation />
     
     <ProductLayout 
-           productId="10001"
+           productId={props.match.params.id}
            productQty={1}
-           productName="Leeds Rhinos 2020 Kids Performance Polo 4"
-           productPrice={29.99}
-           productBlurb="Official Leeds Rhinos 2020 Training Range."
-           productImageOne="/images/Product1.jpg"
-           productImageTwo="/images/Product2.jpg"
-           productImageThree="/images/Product1.jpg"
-           productImageFour="/images/Product1.jpg"
+           productName={chosenProduct.name}
+           productPrice={chosenProduct.price}
+           productBlurb={chosenProduct.blurb}
+           productImageOne={chosenProduct.imageOne}
+           productImageTwo={chosenProduct.imageTwo}
+           productImageThree={chosenProduct.imageThree}
+           productImageFour={chosenProduct.imageFour}
+           productTeam={chosenProduct.team}
           />
+
+    <Footer />
+    </div>
   );
 }
 

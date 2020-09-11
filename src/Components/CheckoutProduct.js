@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import '../Components/CheckoutProduct.css';
-import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 
 
-function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne, checkoutQty} ) {
+function CheckoutProduct({ checkoutId, checkoutUnique, checkoutName, checkoutSize, checkoutPrice, checkoutImageOne, checkoutQty, checkoutTotal} ) {
 
     const [{ basket }, dispatch] =  useStateValue();
 
@@ -17,7 +16,12 @@ function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImag
 
     }
 
-    console.log({basket});
+    console.log(basket[0])
+
+
+
+    const [selectionQty, setCount] = useState(checkoutQty);
+
 
 
   return (
@@ -30,17 +34,17 @@ function CheckoutProduct({ checkoutId, checkoutName, checkoutPrice, checkoutImag
                         src={ checkoutImageOne }
                         alt="logo"
                     /></div>
-                    {checkoutName}
+                    {checkoutName + " - " + checkoutSize}
                 </div></td>
                 <td>£{checkoutPrice}</td>
                 <td><div className="checkout__productSelections">
 
-                 <div className="checkout__quantity">-</div>
-                 <div className="checkout__quantity">{ checkoutQty }</div>
-                 <div className="checkout__quantity">+</div>
+                 <div className="checkout__quantity" onClick={() => setCount(Math.max(1, (selectionQty - 1)))}>-</div>
+                 <div className="checkout__quantity">{selectionQty}</div>
+                 <div className="checkout__quantity" onClick={() => setCount(selectionQty + 1)}>+</div>
 
                 </div></td>
-                <td>£{checkoutPrice * checkoutQty}</td>
+                <td>£{(checkoutPrice * selectionQty).toFixed(2)}</td>
               </tr>
   );
 }

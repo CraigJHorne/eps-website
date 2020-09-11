@@ -14,25 +14,25 @@ function App() {
     <Router>
       <div className="app">
        <Switch>
-        <Route path="/shop/leedsrhinos">
+        <Route path="/shop/leeds">
           <Header />
           <Navigation />
           <Category 
-          team="Leeds Rhinos"/>
+          team="Leeds"/>
           <Footer />
         </Route>
-        <Route path="/shop/doncasterrovers">
+        <Route path="/shop/doncaster">
           <Header />
           <Navigation />
           <Category 
-          team="Doncaster Rovers"/>
+          team="Doncaster"/>
           <Footer />
         </Route>
-        <Route path="/shop/gloucesterrugby">
+        <Route path="/shop/gloucester">
           <Header />
           <Navigation />
           <Category 
-          team="Gloucester Rugby"/>
+          team="Gloucester"/>
           <Footer />
         </Route>
         <Route path="/checkout">
@@ -41,11 +41,11 @@ function App() {
           <Checkout />
           <Footer />
         </Route>
-        <Route path="/shop/oxen">
+        <Route path="/shop/generic">
           <Header />
           <Navigation />
           <Category 
-          team="Oxen"/>
+          team="Generic"/>
           <Footer />
         </Route>
         <Route path="/shop/sale">
@@ -61,11 +61,7 @@ function App() {
           Login
           <Footer />
         </Route>
-        <Route path="/shop/product/">
-          <Header />
-          <Navigation />
-          <Product />
-          <Footer />
+        <Route path="/shop/product/:id" component={Product}>
         </Route>
         <Route path="/">
           <Header />

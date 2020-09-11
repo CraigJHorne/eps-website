@@ -3,13 +3,12 @@ import '../Components/CheckoutLayout.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import CheckoutProduct from '../Components/CheckoutProduct';
-import getBasketTotal from '../Reducer';
 import CurrencyFormat from 'react-currency-format';
 import {getTotal} from '../Reducer';
 
 
 
-function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne, checkoutQty} ) {
+function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImageOne, checkoutQty, checkoutTotal} ) {
 
     const [{ basket }, dispatch] =  useStateValue();
 
@@ -43,6 +42,9 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
                    checkoutPrice={item.price}
                    checkoutImageOne={item.image}
                    checkoutQty={item.qty}
+                   checkoutTotal={item.qty * item.price}
+                   checkoutSize={item.size}
+                   checkoutUnique={item.unique}
                  />
               ))}
         
