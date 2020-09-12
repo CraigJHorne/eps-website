@@ -21,6 +21,9 @@ const reducer = (state, action) => {
 		case "REMOVE_FROM_BASKET":
 
 			let newBasket = [...state.basket];
+
+			console.log(newBasket);
+
 			const index = state.basket.findIndex(
 				(basketItem) => basketItem.id === action.id);
 
@@ -37,6 +40,31 @@ const reducer = (state, action) => {
 			}
 
 			return { ...state, basket: newBasket };
+
+		case "INCREASE_VALUE":
+
+
+			console.log("hello");
+
+			//*let newBasket2 = [...state.basket];
+
+			//*const index2 = state.basket.findIndex(
+				//*(basketItem) => basketItem.id === action.id);
+
+			//* newBasket2[index2].qty = (newBasket2[index2].qty + 1)
+
+			//*console.log(newBasket2)
+
+			//*return { ...state, basket: newBasket2 };
+
+			return state;
+
+		case "DECREASE_VALUE":
+
+
+			console.log("bye");
+
+			return state;
 
 
 		default:

@@ -16,9 +16,23 @@ function CheckoutProduct({ checkoutId, checkoutUnique, checkoutName, checkoutSiz
 
     }
 
+    const increaseValue = () => {
 
+      dispatch({
+        type: "INCREASE_VALUE",
+        id: checkoutId,
+      });
 
-    const [selectionQty, setCount] = useState(checkoutQty);
+    }
+
+    const decreaseValue = () => {
+
+      dispatch({
+        type: "DECREASE_VALUE",
+        id: checkoutId,
+      });
+
+    }
 
 
 
@@ -37,12 +51,12 @@ function CheckoutProduct({ checkoutId, checkoutUnique, checkoutName, checkoutSiz
                 <td>£{checkoutPrice}</td>
                 <td><div className="checkout__productSelections">
 
-                 <div className="checkout__quantity" onClick={() => setCount(Math.max(1, (selectionQty - 1)))}>-</div>
-                 <div className="checkout__quantity">{selectionQty}</div>
-                 <div className="checkout__quantity" onClick={() => setCount(selectionQty + 1)}>+</div>
+                 <div className="checkout__quantity" onClick={decreaseValue}>-</div>
+                 <div className="checkout__quantity">{checkoutQty}</div>
+                 <div className="checkout__quantity" onClick={increaseValue}>+</div>
 
                 </div></td>
-                <td>£{(checkoutPrice * selectionQty).toFixed(2)}</td>
+                <td>£{(checkoutPrice * checkoutQty).toFixed(2)}</td>
               </tr>
   );
 }

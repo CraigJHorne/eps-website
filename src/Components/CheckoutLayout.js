@@ -12,6 +12,8 @@ function CheckoutLayout({ checkoutId, checkoutName, checkoutPrice, checkoutImage
 
     const [{ basket }, dispatch] =  useStateValue();
 
+    console.log(basket);
+
 
   return (
     <div className="checkoutlayout">

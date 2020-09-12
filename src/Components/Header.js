@@ -6,15 +6,26 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from '../StateProvider';
 import {getQty} from '../Reducer';
+import BurgerMenu from '../Components/BurgerMenu';
 
 function Header() {
 
 	const [{ basket }] =  useStateValue();
 
+	const openMenu = () => {
+    document.querySelector('.sidebar').classList.add('open');
+  };
+
 
 	return (
 
 		<div className="header">
+
+		<aside className="sidebar">
+			<BurgerMenu />
+		</aside>
+
+
 
 			<div className="header__wrap">
 
@@ -24,7 +35,7 @@ function Header() {
 						<input type="text" className="header__searchInput" placeholder="Search for products"/>
 						<SearchIcon className="header__searchIcon" />
 					</div>
-					<div className="header__burger">
+					<div className="header__burger" onClick={openMenu}>
 						<MenuIcon className="header__burger" />
 						<div className="header_burgerMenu">
 							<span>MENU</span>
