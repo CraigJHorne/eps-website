@@ -11,30 +11,10 @@ function CheckoutProduct({ checkoutId, checkoutUnique, checkoutName, checkoutSiz
 
       dispatch({
         type: "REMOVE_FROM_BASKET",
-        id: checkoutId,
+        unique: checkoutUnique,
       });
 
     }
-
-    const increaseValue = () => {
-
-      dispatch({
-        type: "INCREASE_VALUE",
-        id: checkoutId,
-      });
-
-    }
-
-    const decreaseValue = () => {
-
-      dispatch({
-        type: "DECREASE_VALUE",
-        id: checkoutId,
-      });
-
-    }
-
-
 
   return (
             
@@ -51,9 +31,8 @@ function CheckoutProduct({ checkoutId, checkoutUnique, checkoutName, checkoutSiz
                 <td>£{checkoutPrice}</td>
                 <td><div className="checkout__productSelections">
 
-                 <div className="checkout__quantity" onClick={decreaseValue}>-</div>
-                 <div className="checkout__quantity">{checkoutQty}</div>
-                 <div className="checkout__quantity" onClick={increaseValue}>+</div>
+                 <div>{checkoutQty}</div>
+
 
                 </div></td>
                 <td>£{(checkoutPrice * checkoutQty).toFixed(2)}</td>

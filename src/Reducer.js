@@ -22,10 +22,8 @@ const reducer = (state, action) => {
 
 			let newBasket = [...state.basket];
 
-			console.log(newBasket);
-
 			const index = state.basket.findIndex(
-				(basketItem) => basketItem.id === action.id);
+				(basketItem) => basketItem.unique === action.unique);
 
 
 			if (index >= 0) {
@@ -43,21 +41,16 @@ const reducer = (state, action) => {
 
 		case "INCREASE_VALUE":
 
-
-			console.log("hello");
-
 			//*let newBasket2 = [...state.basket];
 
 			//*const index2 = state.basket.findIndex(
-				//*(basketItem) => basketItem.id === action.id);
+				//*(basketItem) => basketItem.unique === action.unique);
 
-			//* newBasket2[index2].qty = (newBasket2[index2].qty + 1)
+			//*console.log(index2)
 
-			//*console.log(newBasket2)
+			//*newBasket2[index2].qty = (newBasket2[index2].qty + 1)
 
-			//*return { ...state, basket: newBasket2 };
-
-			return state;
+			//*return { ...state, basket: newBasket };
 
 		case "DECREASE_VALUE":
 

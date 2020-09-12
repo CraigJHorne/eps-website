@@ -1,12 +1,12 @@
 import React from 'react';
 import '../Components/Header.css';
 import { Link } from 'react-router-dom';
-import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from '../StateProvider';
 import {getQty} from '../Reducer';
 import BurgerMenu from '../Components/BurgerMenu';
+import SearchBox from '../Components/SearchBox';
 
 function Header() {
 
@@ -31,10 +31,11 @@ function Header() {
 
 				{/* search box left */}
 				<div className="header_left">
-					<div className="header__search">
-						<input type="text" className="header__searchInput" placeholder="Search for products"/>
-						<SearchIcon className="header__searchIcon" />
+
+					<div className="to_implement">
+					<SearchBox />
 					</div>
+
 					<div className="header__burger" onClick={openMenu}>
 						<MenuIcon className="header__burger" />
 						<div className="header_burgerMenu">
@@ -56,11 +57,13 @@ function Header() {
 
 					{/* login/register */}
 
+						<div className="to_implement">
 						<Link className="header__link" to="/login">
 							<div className="header__option">
 								<span>LOGIN / REGISTER</span>
 							</div>
 						</Link>
+						</div>
 
 						{/* Basket item with number */}
 

@@ -21,6 +21,10 @@ a:link{
   text-decoration: none!important;
 }
 
+.to_implement {
+	display: none;
+}
+
 /* -- Style Header -- */
 
 .header {
