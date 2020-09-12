@@ -40,9 +40,9 @@ function ItemsCard({ itemId, itemImageOne, itemImageTwo, itemName, itemPrice}) {
             <div className="items__lower">
 
                 <HeartIcon />
-                <Link>
+                <div>
                     <button className="items__button" type="button">ADD TO BASKET</button>
-                </Link>
+                </div>
 
             </div>
 
